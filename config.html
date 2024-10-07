@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Michael's HRM Fan Configuration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <style>
+      html {
+        font-family: Tahoma, Geneva, sans-serif;
+        color: #636363;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table td {
+        padding: 15px;
+      }
+      table thead td {
+        background-color: #54585d;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 13px;
+        border: 1px solid #54585d;
+      }
+      table tbody td {
+        border: 1px solid #dddfe1;
+      }
+      table tbody tr {
+        background-color: #f9fafb;
+      }
+      table tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      .button1 {
+        background-color: rgba(51, 51, 51, 0.05);
+        border-radius: 8px;
+        border-width: 1px;
+        color: #54585d;
+        border-color: #dddfe1;
+        line-height: 20px;
+        margin: 0;
+        padding: 10px 12px;
+      }
+    </style>
+  </head>
+<body>
+<h1>Pi Pico HRM Fan Config</h1>
+
+<table>
+  <thead>
+    <tr>
+      <td>Setting</td>
+      <td>Value</td>
+      <td>Description</td>
+    </tr>
+  </thead>  
+  <tr>
+    <td>HR Zone 1</td>
+    <td>**hrZone1** bpm</td>
+    <td>Min HR to activate fan speed 1</td>
+  </tr>
+  <tr>
+    <td>HR Zone 2</td>
+    <td>**hrZone2** bpm</td>
+    <td>Min HR to activate fan speed 2</td>
+  </tr>
+  <tr>
+    <td>HR Zone 3</td>
+    <td>**hrZone3** bpm</td>
+    <td>Min HR to activate fan speed 3</td>
+  </tr>
+  <tr>
+    <td>Threshold</td>
+    <td>**threshold** bpm</td>
+    <td>Threshold below HR zone to lower fan speed</td>
+  </tr>
+</table>
+
+<p>
+<form action="/saveConfig" method="get">
+    <label for="hrZone1">HR Zone 1</label>
+    <input type="number" id="hrZone1" name="_HR_ZONE_1" value="**hrZone1**" style="padding-right:35px; text-align:right;"><span style="margin-left:-35px;">bpm</span><br><br>
+    <label for="hrZone2">HR Zone 2</label>
+    <input type="number" id="hrZone2" name="_HR_ZONE_2" value="**hrZone2**" style="padding-right:35px; text-align:right;"><span style="margin-left:-35px;">bpm</span><br><br>
+    <label for="hrZone3">HR Zone 3</label>
+    <input type="number" id="hrZone3" name="_HR_ZONE_3" value="**hrZone3**" style="padding-right:35px; text-align:right;"><span style="margin-left:-35px;">bpm</span><br><br>
+    <label for="threshold">Threshold</label>
+    <input type="number" id="threshold" name="_HR_THRESHOLD" value="**threshold**" style="padding-right:35px; text-align:right;"><span style="margin-left:-35px;">bpm</span><br><br>
+    <input type="submit" value="Save Config" class="button1">
+  </form>
+</p>
+
+<button class="button1" onclick="location.href='/'">Home</button>
+
+</body>
+</html>

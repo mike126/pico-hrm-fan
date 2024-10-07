@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raspberry Pi Pico Simple LED</title>
+</head>
+<body>
+<p>Click the buttons to control the LED</p>
+<input type="button" onclick="document.location='/ledon'" value="TURN LED ON"/>
+<p></p>
+<input type="button" onclick="document.location='/ledoff'" value="TURN LED OFF"/>
+<p></p>
+<p>The LED is **ledState**</p>
+
+
+<form action="/config" method="post">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

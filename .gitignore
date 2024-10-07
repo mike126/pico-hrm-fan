@@ -1,0 +1,6 @@
+# Some misc files from my local 
+/2x16_display/
+/xbox_bluetooth/
+
+# Python cache files
+__pycache__/
